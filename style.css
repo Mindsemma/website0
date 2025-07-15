@@ -229,7 +229,7 @@ nav ul li a:hover::after {
     position: absolute; /* Position relative to .hero-header */
     top: 50%;
     left: 50%;
-    min-width: 100%; /* Ensure video covers entire width */
+    max-width: 100%; /* Ensure video covers entire width */
     min-height: 100%; /* Ensure video covers entire height */
     width: 100%;
     height: auto;
