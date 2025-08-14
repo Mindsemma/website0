@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Image Gallery</title>
+    <!-- Tailwind CSS is loaded, but custom styles are now in style.css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- The external stylesheet now contains all custom styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="p-4 sm:p-8 md:p-12">
+    <header>
+        <div class="container header-container">
+            <div class="logo" id="logo">
+                <img src="Picture.png" alt="SUNFOYAC-CSN Logo">
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+           <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="dropdown"><a href="what we do.html">what we do</a>
+                         <ul class="dropdown-content">
+                            <li><a href="events.html">events</a></li>
+                            <li><a href="events gallery.html">gallery</a></li>
+                            <li><a href="programs.html">programs</a></li>
+                            <li><a href="news.html">news</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                   
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto">
+        <!-- Gallery Header -->
+        <header class="text-center mb-10">
+            <h1 class="text-4xl sm:text-5xl font-bold text-gray-800 mb-2">My Image Gallery</h1>
+            <p class="text-gray-600 text-lg">A collection of beautiful images.</p>
+        </header>
+
+        <!-- Image Gallery Grid -->
+            <h1 style="align-items: center; text-align: center; font-size: xx-large; color: black; font-style: italic; background-color: aqua;">RMNACH+Nutrition CSO MEETING</h1>
+        <div id="gallery-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            <!-- Images will be injected here by JavaScript -->
+          
+        </div>
+    </div>
+     <script>
+        // --- SCRIPT FOR GENERATING THE IMAGE GALLERY ---
+
+        // Step 1: Define your image URLs.
+        // The images are now expected to be in a folder named "max".
+        // For this to work with your own images, you must place the image files in the "max" folder
+        // located in the same directory as this HTML file.
+        // Replace the placeholder URLs below with your image filenames.
+        // Example: If your image is named "sunset.jpg", the URL would be "max/sunset.jpg".
+      
+        const images = [
+           
+            "RCSOM/ROY_5355.jpg",
+            "RCSOM/ROY_5363.jpg",
+            "RCSOM/ROY_5366.jpg",
+            "RCSOM/ROY_5421.jpg",
+            "RCSOM/ROY_5534.jpg",
+            "RCSOM/ROY_5537.jpg",
+            "RCSOM/ROY_5544.jpg",
+            "RCSOM/ROY_5564.jpg",
+            "RCSOM/ROY_5571.jpg",
+            "RCSOM/ROY_5591.jpg",
+            "RCSOM/ROY_5620.jpg",
+            "RCSOM/ROY_5705.jpg",
+            "RCSOM/ROY_5425.jpg",
+            "RCSOM/ROY_5429.jpg",
+            "RCSOM/ROY_5534.jpg",
+        ];
+
+        // Step 2: Get the gallery container element.
+        const gallery = document.getElementById('gallery-grid');
+
+        // Step 3: Loop through the image array and create HTML elements for each.
+        images.forEach(imageUrl => {
+            const imageContainer = document.createElement('div');
+            imageContainer.className = 'relative group overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out';
+
+            const imageElement = document.createElement('img');
+            imageElement.src = imageUrl;
+            // The onerror attribute will provide a fallback placeholder if the image file is not found
+            imageElement.onerror = "this.onerror=null; this.src='https://placehold.co/400x300/F06449/ffffff?text=Image+Not+Found'";
+            imageElement.alt = 'Gallery image';
+            imageElement.className = 'w-full h-full object-cover';
+
+            imageContainer.appendChild(imageElement);
+            gallery.appendChild(imageContainer);
+        });
+    </script>
+ 
+</body>
+</html>
