@@ -206,7 +206,7 @@ nav ul li a:hover::after {
     color: white;
     text-align: center;
     padding: 5rem 0;
-    animation: image-slide 3s infinite; /* Change this value to adjust the total animation duration */
+    animation: image-slide 6s infinite; /* Change this value to adjust the total animation duration */
     position: relative;
 }
 
