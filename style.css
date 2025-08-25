@@ -208,6 +208,8 @@ nav ul li a:hover::after {
     padding: 5rem 0;
     animation: image-slide 6s infinite; /* Change this value to adjust the total animation duration */
     position: relative;
+    width: 100%;
+    max-width: 100%;
 }
 
 @keyframes image-slide {
