@@ -1,4 +1,6 @@
-/* Embedded style.css content */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 :root {
     --primary-color: #100A28;
     --secondary-color: #ffc107;
@@ -12,13 +14,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    font-family: 'Inter', sans-serif;
 }
 
 body {
     line-height: 1.6;
     color: var(--text-color);
-    background-color: #f9f9f9;
+    background-color: #f3f4f6;
     width:100%;
 }
 p{
@@ -152,7 +155,7 @@ nav ul li a:hover::after {
     background-color: #5e5b5b;
 }
 @media (min-width: 768px) {
-    /*for desktops and other big scren*/
+ 
 .dropdown:hover .dropdown-content{
     display: block;
     color: wheat;
@@ -197,22 +200,43 @@ nav ul li a:hover::after {
 
 
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('cover.avif'); /* Placeholder for cover.avif */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('ROY_5620.jpg');
     background-size: cover;
     background-position: center;
     color: white;
     text-align: center;
     padding: 5rem 0;
-  
+    animation: image-slide 3s infinite; /* Change this value to adjust the total animation duration */
+    position: relative;
+}
+
+@keyframes image-slide {
+    0%, 16.66% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('ROY_5620.jpg');
+    }
+    16.67%, 33.32% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('ROY_5355.jpg');
+    }
+    33.33%, 49.98% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('ROY_5363.jpg');
+    }
+    49.99%, 66.64% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('ROY_5366.jpg');
+    }
+    66.65%, 83.3% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('ROY_5421.jpg');
+    }
+    83.31%, 100% {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('ROY_5425.jpg');
+    }
 }
 .hero-1 {
     position: relative;
     width: 100%;
     overflow: hidden;
     color: white;
-    /* 16:9 Aspect Ratio Container */
     height: 0;
-    padding-top: 56.25%; /* 9/16 = 0.5625 or 56.25% */
+    padding-top: 56.25%; 
 }
 
 .video-container {
@@ -221,6 +245,7 @@ nav ul li a:hover::after {
   left: 0;
   width: 100%;
   height: 100%;
+  max-width: 100%;
 }
 
 .responsive-video {
@@ -261,7 +286,6 @@ nav ul li a:hover::after {
 }
 
 
-/* Mobile Adjustments */
 @media (max-width: 768px) {
     .hero-1{
         height: auto;
@@ -281,7 +305,7 @@ nav ul li a:hover::after {
 }
 @media (max-width: 480px) and (min-height: 800px) {
   .hero-1 {
-    padding-bottom: 100vh; /* Allow taller aspect ratio */
+    padding-bottom: 100vh; 
   }
 }
 @media (max-width: 480px) {
@@ -289,7 +313,7 @@ nav ul li a:hover::after {
         padding: 1rem;
     }
     
-    /* Optional: Allow full-height video on very small screens */
+ 
     @media (max-height: 600px) {
         .hero-1 {
             padding-top: 100vh;
@@ -444,7 +468,7 @@ nav ul li a:hover::after {
     font-size: 12px;
 }
 
-/* Programs Section */
+
 .programs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -684,272 +708,7 @@ h4 a{
     resize: vertical;
 }
 
-/* Donation Page Layout */
-.donation-layout {
-    display: flex;
-    gap: 30px;
-}
 
-.donation-content {
-    flex: 1;
-    padding-right: 20px;
-}
-
-.donation-form-container {
-    width: 400px;
-    max-width: 100%;
-}
-
-/* Impact Statement */
-.impact-statement {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-}
-
-.impact-statement ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.impact-statement li {
-    margin-bottom: 10px;
-    padding-left: 25px;
-    position: relative;
-}
-
-.impact-statement li i {
-    color: var(--primary-color);
-    position: absolute;
-    left: 0;
-    top: 3px;
-}
-
-/* Impact Stats */
-.impact-stats {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.stat-item {
-    flex: 1;
-    padding: 15px;
-}
-
-.stat-number {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--primary-color);
-    margin-bottom: 5px;
-}
-
-.stat-label {
-    font-size: 14px;
-    color: var(--text-color);
-}
-
-/* Testimonial */
-.testimonial {
-    background-color: var(--light-color);
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    position: relative;
-}
-
-.testimonial:before {
-    content: '"';
-    font-size: 60px;
-    color: rgba(0,0,0,0.1);
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    line-height: 1;
-}
-
-.testimonial blockquote {
-    margin: 0;
-    padding: 0 0 0 30px;
-    font-style: italic;
-}
-
-.testimonial-author {
-    text-align: right;
-    font-weight: bold;
-    margin-top: 10px;
-    color: var(--primary-color);
-}
-
-/* Donation Form Styles */
-.form-section {
-    margin-bottom: 25px;
-    padding: 20px;
-    border: 1px solid #eee;
-    border-radius: 5px;
-    background-color: white;
-}
-
-.form-section h3 {
-    color: var(--primary-color);
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 18px;
-}
-
-.form-section h3 i {
-    margin-right: 10px;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    font-size: 14px;
-}
-
-label.required:after {
-    content: " *";
-    color: red;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="number"],
-select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 14px;
-}
-
-.radio-group, .checkbox-group {
-    margin: 10px 0;
-}
-
-.radio-group label, .checkbox-group label {
-    font-weight: normal;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 8px;
-    font-size: 14px;
-}
-
-.amount-options {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 15px 0;
-}
-
-.amount-option {
-    flex: 1;
-    min-width: 100px;
-}
-
-.amount-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #f8f9fa;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: all 0.3s ease;
-}
-
-.amount-btn:hover {
-    background-color: #e9ecef;
-}
-
-.amount-btn.selected {
-    background-color: var(--primary-color);
-    color: white;
-    border-color: var(--primary-color);
-}
-
-.payment-icon {
-    margin-right: 8px;
-    font-size: 16px;
-}
-
-/* Stripe Elements */
-.stripe-card-input {
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
-
-.stripe-error {
-    color: #fa755a;
-    font-size: 14px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-}
-
-/* Mobile Money Fields */
-#mobile-money-fields {
-    margin-top: 15px;
-}
-
-.mobile-money-note {
-    font-size: 13px;
-    color: #666;
-    margin-top: 15px;
-}
-
-/* Secure Payment */
-.secure-payment {
-    margin-top: 20px;
-    font-size: 13px;
-    color: #666;
-    text-align: center;
-}
-
-.secure-payment i {
-    color: var(--primary-color);
-    margin-right: 5px;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 992px) {
-    .donation-layout {
-        flex-direction: column;
-    }
-
-    .donation-content {
-        padding-right: 0;
-        margin-bottom: 30px;
-    }
-
-    .donation-form-container {
-        width: 100%;
-    }
-}
-
-@media (max-width: 576px) {
-    .impact-stats {
-        flex-direction: column;
-    }
-
-    .stat-item {
-        margin-bottom: 15px;
-    }
-
-    .amount-option {
-        min-width: calc(50% - 10px);
-    }
-}
 
 /* Footer */
 footer {
@@ -1059,7 +818,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Responsive Styles */
+
 @media (max-width: 992px) {
     .header-container {
         flex-direction: column;
@@ -1134,3 +893,6 @@ footer {
         min-width: 100%;
     }
 }
+
+
+
