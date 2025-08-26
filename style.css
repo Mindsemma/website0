@@ -206,7 +206,7 @@ background-position: center;
 background-repeat: no-repeat;
 color: white;
 text-align: center;
-padding: 10rem 0;
+padding: 20rem 0;
 animation: image-slide 16s infinite; /* Change this value to adjust the total animation duration */
 position: relative;
 width: 100%;
@@ -236,7 +236,7 @@ height: 100%;
 
     .hero {
 
-        padding: 5rem 0; /* Reduces top and bottom padding for a smaller height */
+        padding: 10rem 0; /* Reduces top and bottom padding for a smaller height */
         height: 50%;
     }
 
