@@ -238,9 +238,7 @@ height: 100%;
 
         padding: 5rem 0; /* Reduces top and bottom padding for a smaller height */
 
-        height: auto; /* Allows the height to be determined by its content */
-
-        min-height: 200px; /* Sets a minimum height to ensure some visibility */
+        /* Sets a minimum height to ensure some visibility */
 
         background-position: center top; /* You might want to adjust the background position to better show the images on a smaller screen */
 
