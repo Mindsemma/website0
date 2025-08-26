@@ -235,7 +235,7 @@ height: 100%;
 @media (max-width: 768px) {
 
     .hero {
-height: 40vh;
+ padding: 1rem 0;
     }
 
 
