@@ -206,7 +206,7 @@ background-position: center;
 background-repeat: no-repeat;
 color: white;
 text-align: center;
-padding: 2rem 0;
+padding: 5rem 0;
 animation: image-slide 16s infinite; /* Change this value to adjust the total animation duration */
 position: relative;
 width: 100%;
@@ -238,7 +238,6 @@ height: 100%;
 
         padding: 5rem 0; /* Reduces top and bottom padding for a smaller height */
 
-        /* Sets a minimum height to ensure some visibility */
 
         background-position: center top; /* You might want to adjust the background position to better show the images on a smaller screen */
 
