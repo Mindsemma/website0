@@ -236,7 +236,7 @@ height: 100%;
 
     .hero {
 
-        padding: 2rem 0; /* Reduces top and bottom padding for a smaller height */
+        padding: 5rem 0; /* Reduces top and bottom padding for a smaller height */
 
         height: auto; /* Allows the height to be determined by its content */
 
