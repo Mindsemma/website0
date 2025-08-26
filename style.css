@@ -242,7 +242,7 @@ height: 100%;
 
         background-position: center top; /* You might want to adjust the background position to better show the images on a smaller screen */
 
-        background-size: contain; /* This is already set, but it's important for mobile */
+        background-size: cover; /* This is already set, but it's important for mobile */
 
     }
 
