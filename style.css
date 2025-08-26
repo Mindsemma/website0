@@ -232,6 +232,33 @@ height: 100vh;
         background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('ROY_5425.jpg');
     }
 }
+@media (max-width: 768px) {
+
+    .hero {
+
+        padding: 2rem 0; /* Reduces top and bottom padding for a smaller height */
+
+        height: auto; /* Allows the height to be determined by its content */
+
+        min-height: 200px; /* Sets a minimum height to ensure some visibility */
+
+        background-position: center top; /* You might want to adjust the background position to better show the images on a smaller screen */
+
+        background-size: contain; /* This is already set, but it's important for mobile */
+
+    }
+
+
+
+    @keyframes image-slide {
+
+        /* No changes are needed to the animation itself, as it's percentage-based */
+
+        /* The animation will scale to the new dimensions of the .hero container */
+
+    }
+
+}
 
 .hero-1 {
     position: relative;
